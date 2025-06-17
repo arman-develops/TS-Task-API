@@ -13,3 +13,11 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Task {
+  id Int @id @default(autoincrement()) @map("task_id")
+  title String @map("task_title")
+  description String @map("task_desciption")
+  isCompleted Boolean @default(false) @map("is_completed")
+  @@map("tasks")
+}
