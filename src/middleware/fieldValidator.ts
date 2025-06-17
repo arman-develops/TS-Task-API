@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { SendErrorResponse } from "../utils/error.util";
+import { SendErrorResponse } from "../utils/error.utils";
 
 function validateCreateTask(req:Request, res:Response, next:NextFunction):void { 
     const {taskName, taskDescription} = req.body

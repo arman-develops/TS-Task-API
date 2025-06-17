@@ -2,7 +2,7 @@ import {prisma} from '../config/client.config'
 import { Request, Response, json, NextFunction } from 'express';
 import { Task } from '@prisma/client'
 import { SendSuccessResponse } from '../utils/success.utils'
-import { SendErrorResponse } from '../utils/error.util';
+import { SendErrorResponse } from '../utils/error.utils';
 
 async function getAllTasks (_req:Request, res:Response, next:NextFunction) {
     try {
